@@ -77,7 +77,11 @@ export default function Projects() {
                   <div className="img-container flex items-center justify-center mb-5">
                     {project.image ? (
                       <img 
-                        className="w-200 hover-scale transition-transform duration-300" 
+                        className={`hover-scale transition-transform duration-300 ${
+                          project.title === "TRIP ADVISOR CLONE" 
+                            ? "max-w-[180px] max-h-[180px] w-auto h-auto object-contain" 
+                            : "w-200"
+                        }`}
                         src={project.image} 
                         alt={project.title} 
                       />

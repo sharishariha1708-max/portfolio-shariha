@@ -7,6 +7,7 @@ import Git from "../assets/icons/github.png";
 import Python from "../assets/icons/python.png";
 import Sql from "../assets/icons/sql.png";
 import Excel from "../assets/icons/excel.png";
+import Aws from "../assets/icons/aws.png";
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Skills() {
@@ -21,6 +22,7 @@ export default function Skills() {
     { name: "REACT Js", icon: React },
     { name: "PYTHON", icon: Python },
     { name: "SQL", icon: Sql },
+    { name: "AWS", icon: Aws },
     { name: "AI TOOLS", icon: null, isCustom: true },
     { name: "VIBE CODING", icon: null, isCustom: true },
     { name: "GITHUB", icon: Git },
