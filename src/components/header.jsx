@@ -39,9 +39,6 @@ export default function Header() {
             </h1>
           </div>
           <h2 className="text-5xl font-medium">DATA ENGINEER and FRONT END DEVELOPER</h2>
-          <p className="text-2xl font-medium text-gray-600 mt-2">
-            <span className="text-[#1F3A8A] font-bold">Vibe Coder</span> 
-          </p>
           <div className="flex flex-col gap-4">
             <button
               onClick={handleDownload}
