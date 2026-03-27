@@ -23,32 +23,26 @@ export default function Header() {
           ref={textRef}
           className={`header-section__desc flex flex-col justify-center gap-4 leading-[26px] fade-in-left ${isTextVisible ? 'visible' : ''}`}
         >
-          <p className="text-6xl font-medium gradient-text">HELLO!!!</p>
-          <hr className="border-2 border-[#1F3A8A] w-20" />
-          <div className="text-5xl font-bold flex">
-            <h1>
-              I'M{' '}
-              <span
-                style={{
-                  background: 'linear-gradient(45deg, #1D4ED8, #0EA5E9)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}>
-                VASANTH B
-              </span>
+          <p className="text-2xl font-semibold text-[#475569] mb-2">HELLO!</p>
+          <div className="text-5xl md:text-6xl font-extrabold flex">
+            <h1 className="text-[#0F172A]">
+              I'M VASANTH B
             </h1>
           </div>
-          <h2 className="text-5xl font-medium">DATA ENGINEER and FRONT END DEVELOPER</h2>
-          <div className="flex flex-col gap-4">
+          <h2 className="text-3xl font-bold text-[#3B82F6] mt-2">Aspiring Data Engineer | Cloud Enthusiast</h2>
+          <p className="text-lg text-[#64748B] mt-4 max-w-2xl leading-relaxed">
+            Skilled in Python, MySQL, and AWS. Currently pursuing an AWS Cloud Internship to apply academic knowledge and build scalable cloud architectures.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <button
               onClick={handleDownload}
-              className="hire-button text-white text-3xl p-2 border rounded-[10px] bg-[#1F3A8A] hover:bg-white hover:text-[#1F3A8A] hover:border-[#1F3A8A] hover:cursor-pointer btn-animated hover-lift"
+              className="px-8 py-3 bg-[#0F172A] text-white font-medium rounded-md hover:bg-[#1E293B] transition-colors duration-200"
             >
-              HIRE ME
+              Resume / CV
             </button>
             <button
               onClick={() => (window.location.href = 'tel:+918248577533')}
-              className="contact-button text-3xl p-2 border rounded-[10px] hover:border-[#1F3A8A] hover:cursor-pointer btn-animated hover-lift"
+              className="px-8 py-3 bg-white text-[#0F172A] border border-[#CBD5E1] font-medium rounded-md hover:bg-[#F8FAFC] transition-colors duration-200"
             >
               CONTACT
             </button>

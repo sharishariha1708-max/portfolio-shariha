@@ -1,7 +1,3 @@
-import Trip from "../assets/img/projects/tripadvisor.png";
-import Green from "../assets/img/projects/Greenden.jpg";
-import Udemy from "../assets/img/projects/Udemy.png";
-import Python from "../assets/img/projects/Python.png";
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Projects() {
@@ -10,143 +6,81 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "TRIP ADVISOR CLONE",
-      image: Trip,
-      description: "A travel review and booking platform inspired by TripAdvisor. Built with modern web technologies, it features interactive maps, location-based listings, user reviews, and a responsive UI to explore destinations, hotels, and restaurants seamlessly.",
-      link: "https://vasanthbalasubramaniyan.github.io/trip-advisor/"
+      title: "ATM - Python System",
+      description: "Atm system with PIN verification, supporting withdrawal, deposit, balance inquiry. Includes robust error handling and transaction checks.",
+      link: "https://github.com/VasanthBalasubramaniyan/ATM-Python",
+      tags: ["Python", "Scripting"]
     },
     {
-      title: "Greenden",
-      image: Green,
-      description: "A responsive and visually appealing plant store website built with Tailwind CSS and JavaScript. It features a modern layout, interactive navigation, and mobile-friendly design.",
-      link: "https://vasanthbalasubramaniyan.github.io/trip-advisor/"
+      title: "AWS ETL Pipeline Orchestration",
+      description: "Automated data pipeline using AWS Glue and S3 to extract, transform, and load datasets, optimizing standard queries for analytics.",
+      link: "#",
+      tags: ["AWS Glue", "S3", "Data Processing"]
     },
     {
-      title: "Nostra e-Commerce",
-      image: null,
-      description: "A sleek and responsive eCommerce UI built with Tailwind CSS and JavaScript, featuring interactive product listings, a modern layout, and smooth navigation optimized for all devices.",
-      link: "https://vasanthbalasubramaniyan.github.io/Nostra/"
-    },
-    {
-      title: "Udemy CLONE",
-      image: Udemy,
-      description: "A responsive online course platform UI built with ReactJS and Tailwind CSS, featuring dynamic components, modern design, and a clean layout optimized for all screen sizes.",
-      link: "https://udemy-react-vasanth-bs-projects.vercel.app/"
-    },
-    {
-      title: "PORTFOLIO",
-      image: null,
-      description: "A responsive personal portfolio built with ReactJS and Tailwind CSS, showcasing projects and skills using interactive UI and donut charts for clean visual representation.",
-      link: "https://github.com/VasanthBalasubramaniyan/portfolio-new"
-    },
-    {
-      title: "ATM - PYTHON",
-      image: Python,
-      description: "A simple ATM system with PIN verification, supporting withdrawal, deposit (up to ₹10,000), balance inquiry, and fast cash. Includes error handling, balance checks, and a restart option for repeated use.",
-      link: "https://github.com/VasanthBalasubramaniyan/ATM-Python"
+      title: "Data Warehouse Analytics",
+      description: "A centralized data warehouse solution to aggregate business metrics, providing a single source of truth for downstream reporting dashboards.",
+      link: "#",
+      tags: ["MySQL", "ETL", "Analytics"]
     }
   ];
 
+  const FolderIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-[#3B82F6]">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
+    </svg>
+  );
+
   return (
-    <>
-      <div id="projects" className="projects-section__conatiner mt-20">
-        <div 
-          ref={headerRef}
-          className={`projects-section__head fade-in-up ${isHeaderVisible ? 'visible' : ''}`}
-        >
-          <h1 className="text-6xl text-center mb-15 font-bold md:text-5xl gradient-text">
-            PROJECTS
-          </h1>
-        </div>
-
-        <div 
-          ref={cardsRef}
-          className={`project-section__cards__container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 justify-items-center ${isCardsVisible ? 'visible' : ''}`}
-        >
-          {projects.map((project, index) => (
-            <div 
-              key={project.title}
-              className={`w-[300px] h-[400px] perspective scale-in stagger-${(index % 6) + 1} ${
-                isCardsVisible ? 'visible' : ''
-              }`}
-              style={{ transitionDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative w-full h-full transition-transform duration-500 transform-style preserve-3d hover:rotate-y-180 hover-lift">
-                {/* Front Side */}
-                <div className="absolute w-full h-full backface-hidden bg-white shadow-2xl p-6 rounded-xl hover-glow">
-                  <div className="img-container flex items-center justify-center mb-5">
-                    {project.image ? (
-                      <img 
-                        className={`hover-scale transition-transform duration-300 ${
-                          project.title === "TRIP ADVISOR CLONE" 
-                            ? "max-w-[180px] max-h-[180px] w-auto h-auto object-contain" 
-                            : "w-200"
-                        }`}
-                        src={project.image} 
-                        alt={project.title} 
-                      />
-                    ) : (
-                      <div className="w-200 h-200 flex items-center justify-center">
-                        {project.title === "Nostra e-Commerce" ? (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="w-20 h-20 text-[#1F3A8A]"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                            />
-                          </svg>
-                        ) : (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="w-20 h-20 text-[#1F3A8A]"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                            />
-                          </svg>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                  <h1 className="text-2xl text-center font-bold text-black">
-                    {project.title}
-                  </h1>
-                </div>
-
-                {/* Back Side */}
-                <div className="absolute w-full h-full backface-hidden rotate-y-180 shadow-2xl p-6 rounded-xl flex flex-col items-center justify-center bg-gradient-to-br from-[#1D4ED8] to-[#0EA5E9] text-white">
-                  <p className="mt-2 text-justify text-lg">
-                    {project.description}
-                  </p>
-                  <p className="text-center text-sm mt-4">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      className="text-lg font-bold underline hover:text-yellow-300 transition-colors duration-300 btn-animated"
-                      rel="noopener noreferrer"
-                    >
-                      Visit Site
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+    <div id="projects" className="projects-section__conatiner mt-20 px-4">
+      <div 
+        ref={headerRef}
+        className={`fade-in-up md:ml-10 ${isHeaderVisible ? 'visible' : ''}`}
+      >
+        <h1 className="text-4xl font-extrabold text-[#0F172A] mb-8">PROJECTS</h1>
       </div>
-    </>
+
+      <div 
+        ref={cardsRef}
+        className={`max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${isCardsVisible ? 'visible' : ''}`}
+      >
+        {projects.map((project, index) => (
+          <div 
+            key={project.title}
+            className={`bg-white rounded-xl shadow-[0_1px_3px_0_rgb(0,0,0,0.1),0_1px_2px_-1px_rgb(0,0,0,0.1)] border border-[#E5E7EB] hover:-translate-y-2 hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.1),0_2px_4px_-2px_rgb(0,0,0,0.1)] transition-all duration-300 transform flex flex-col p-6 scale-in stagger-${(index % 6) + 1} ${
+              isCardsVisible ? 'visible' : ''
+            }`}
+            style={{ transitionDelay: `${index * 0.1}s` }}
+          >
+            <div className="flex justify-between items-start mb-6">
+              <div className="p-3 bg-[#F8FAFC] rounded-lg">
+                {FolderIcon}
+              </div>
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-2 text-[#64748B] hover:text-[#3B82F6] transition-colors rounded-full hover:bg-[#F3F4F6]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+              </a>
+            </div>
+            
+            <h2 className="text-xl font-bold text-[#0F172A] mb-3">
+              {project.title}
+            </h2>
+            
+            <p className="text-sm text-[#475569] leading-relaxed mb-6 flex-grow">
+              {project.description}
+            </p>
+
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {project.tags.map(tag => (
+                <span key={tag} className="px-3 py-1 bg-[#F3F4F6] text-[#475569] text-xs font-semibold rounded-full font-mono">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

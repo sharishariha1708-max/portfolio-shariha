@@ -8,7 +8,7 @@ export default function Footer() {
       <footer 
         ref={footerRef}
         id="contact" 
-        className={`footer-container mt-20 bg-gradient-to-r from-[#1D4ED8] to-[#0EA5E9] text-white fade-in-up ${isFooterVisible ? 'visible' : ''}`}
+        className={`footer-container mt-20 bg-[#0F172A] text-white fade-in-up ${isFooterVisible ? 'visible' : ''}`}
       >
         <div className="container mx-auto px-6 py-12">
           {/* Contact Section */}
@@ -117,8 +117,8 @@ export default function Footer() {
                 className="bg-white/10 rounded-full p-4 transition-all duration-300 hover:scale-110 hover-lift group text-white"
                 aria-label="Email Contact"
               >
-                <span className="block p-2 rounded-full transition-colors duration-300 group-hover:bg-[#0EA5E9]/20">
-                  <svg className="w-6 h-6 transition-colors duration-300 group-hover:text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="block p-2 rounded-full transition-colors duration-300 group-hover:bg-[#3B82F6]/20">
+                  <svg className="w-6 h-6 transition-colors duration-300 group-hover:text-[#3B82F6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </span>
@@ -129,7 +129,7 @@ export default function Footer() {
           {/* Copyright */}
           <div className="border-t border-white/20 pt-8 text-center">
             <p className="text-lg">
-              &copy; 2024 Vasanth B. All rights reserved. Built with ❤️ using React & Tailwind CSS.
+              &copy; 2024 Vasanth B. All rights reserved.
             </p>
           </div>
         </div>

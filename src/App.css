@@ -1,19 +1,18 @@
 :root {
-  --color-primary: #1F3A8A;
-  --color-primary-light: #3B82F6;
-  --color-accent: #0EA5E9;
-  --color-muted: #475569;
+  --color-primary: #0F172A;
+  --color-primary-light: #475569;
+  --color-accent: #3B82F6;
+  --color-muted: #64748B;
   --color-surface: #ffffff;
-  --color-bg: #F8FAFC;
-  --color-gradient-start: #1D4ED8;
-  --color-gradient-mid: #2563EB;
-  --color-gradient-end: #0EA5E9;
+  --color-bg: #F3F4F6;
+  --color-gradient-start: #0F172A;
+  --color-gradient-mid: #1E293B;
+  --color-gradient-end: #334155;
 }
 
 body {
   background-color: var(--color-bg);
-  background-image: radial-gradient(at 20% 20%, rgba(37, 99, 235, 0.08), transparent 50%), radial-gradient(at 80% 0%, rgba(14, 165, 233, 0.08), transparent 45%), url("./assets/img/body-bg.png");
-  background-blend-mode: overlay;
+  color: #0F172A;
 }
 .container {
   width: 80%;
@@ -23,23 +22,26 @@ body {
 /* Skills Section Card */
 
 .skills-section_card {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #E5E7EB;
 }
 
 .skills-section_card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 .skills-section_card > img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
 }
@@ -155,11 +157,11 @@ body {
 }
 
 .hover-glow {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(31, 58, 138, 0.25);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .hover-scale {
@@ -190,29 +192,12 @@ body {
   animation: pulse 2s ease-in-out infinite;
 }
 
-/* Gradient Text Animation */
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 .gradient-text {
-  background: linear-gradient(-45deg, var(--color-gradient-start), var(--color-gradient-mid), var(--color-gradient-end), var(--color-gradient-mid));
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 3s ease infinite;
+  color: var(--color-primary);
 }
 
 .gradient-text-white {
-  background: linear-gradient(-45deg, #ffffff, #f0f0f0, #ffffff, #f0f0f0);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 3s ease infinite;
+  color: #ffffff;
 }
 
 /* Shimmer Effect */
@@ -332,11 +317,11 @@ body {
 @keyframes pulse-glow {
   0%, 100% { 
     transform: scale(1); 
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 3px 20px 0px rgba(142, 156, 169, 0.08);
   }
   50% { 
-    transform: scale(1.1); 
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+    transform: scale(1.05); 
+    box-shadow: 0px 20px 80px 0px rgba(104, 117, 141, 0.15);
   }
 }
 
