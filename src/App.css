@@ -615,3 +615,89 @@ svg {
   /* Footer End */
 }
 /* Mobile Responsive end */
+
+/* Dark Mode Overrides */
+body.dark-mode {
+  --color-primary: #ffffff;
+  --color-primary-light: #e0e0e0;
+  --color-surface: #1e1e1e;
+  --color-bg: #121212;
+  --color-muted: #a0aec0;
+  
+  background-color: var(--color-bg) !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .bg-white,
+body.dark-mode .nav-container.bg-white,
+body.dark-mode .nav-container.bg-white\/95 {
+  background-color: var(--color-surface) !important;
+}
+
+body.dark-mode .text-\[\#0F172A\],
+body.dark-mode .text-black,
+body.dark-mode h1.nav-container__head,
+body.dark-mode .project-section__cards__container h1 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .skills-section_card {
+  background-color: var(--color-surface);
+  border-color: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .project-section__cards__container > div,
+body.dark-mode .bg-gray-50,
+body.dark-mode .bg-slate-50,
+body.dark-mode .bg-gray-100 {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .border-gray-200,
+body.dark-mode .border-gray-300 {
+  border-color: #333 !important;
+}
+
+/* Specific elements for dark mode */
+body.dark-mode aside#mobile-sidebar {
+  background: var(--color-surface) !important;
+}
+
+body.dark-mode aside#mobile-sidebar a,
+body.dark-mode ul.lg\:flex > li > a {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode ul.lg\:flex > li.hover\:text-\[\#3B82F6\]:hover > a {
+  color: var(--color-accent) !important;
+}
+
+body.dark-mode a:hover.bg-gray-100,
+body.dark-mode button:hover.bg-gray-100 {
+  background-color: #333 !important;
+}
+
+body.dark-mode .fixed.inset-0.bg-\[\#F3F4F6\] {
+  background-color: var(--color-bg) !important;
+}
+
+body.dark-mode .text-\[\#475569\] {
+  color: #a0aec0 !important;
+}
+
+body.dark-mode .bg-\[\#E2E8F0\] {
+  background-color: #333 !important;
+}
+
+body.dark-mode .bg-\[\#0F172A\] {
+  background-color: #3b82f6 !important;
+}
+body.dark-mode .border-t-\[\#0F172A\] {
+  border-top-color: #ffffff !important;
+}
+body.dark-mode .border-transparent {
+  border-color: transparent !important;
+}
+

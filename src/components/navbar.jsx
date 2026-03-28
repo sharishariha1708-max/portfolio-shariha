@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import '../App.css'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,7 +26,8 @@ export default function Navbar() {
           <div>
             <h1 className="nav-container__head text-2xl font-bold hover:text-[#3B82F6] hover:cursor-pointer transition-colors duration-300 transform hover:scale-105 text-[#0F172A]">VASANTH</h1>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
             {/* Hamburger for mobile & tablet */}
             <button
               type="button"
