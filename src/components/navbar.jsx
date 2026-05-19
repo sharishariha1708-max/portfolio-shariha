@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import '../App.css'
-import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,161 +15,107 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const navLinks = [
+    { name: 'HOME', href: '#home' },
+    { name: 'ABOUT', href: '#about' },
+    { name: 'EXPERIENCE', href: '#experience' },
+    { name: 'PROJECTS', href: '#projects' },
+    { name: 'SKILLS', href: '#skills' },
+    { name: 'CERTIFICATIONS', href: '#certifications' },
+    { name: 'EDUCATION', href: '#education' },
+    { name: 'CONTACT', href: '#contact' }
+  ];
+
   return (
     <>
-      <div className={`nav-container mt-4 shadow-lg sticky top-0 z-200 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-xl' : 'bg-white'
+      <div className={`w-full fixed top-0 z-[200] transition-all duration-300 ${
+        scrolled ? 'glass-panel border-b border-[rgba(0,188,212,0.2)]' : 'bg-transparent'
       }`}>
-        <div className="nav-container__desc p-6 flex sm:justify-between items-center">
+        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div>
-            <h1 className="nav-container__head text-2xl font-bold hover:text-[#3B82F6] hover:cursor-pointer transition-colors duration-300 transform hover:scale-105 text-[#0F172A]">VASANTH</h1>
+            <h1 className="text-2xl font-extrabold text-white tracking-widest hover:text-[#4DD0E1] transition-colors cursor-pointer">
+              VASANTH
+            </h1>
           </div>
           <div className="flex items-center gap-4">
-            <ThemeToggle />
             {/* Hamburger for mobile & tablet */}
             <button
               type="button"
               aria-label="Open menu"
-              aria-controls="mobile-sidebar"
-              aria-expanded={isOpen}
               onClick={() => setIsOpen((v) => !v)}
-              className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-[#0F172A] hover:text-[#3B82F6] focus:outline-none transition-all duration-300 hover:bg-gray-100 rounded-lg"
+              className="lg:hidden p-2 text-white hover:text-[#00BCD4] focus:outline-none transition-all duration-300"
             >
               <div className="relative w-7 h-7">
-                <span className={`absolute top-1 left-0 w-7 h-0.5 bg-current transition-all duration-300 ${
+                <span className={`absolute top-1 left-0 w-7 h-[2px] bg-current transition-all duration-300 ${
                   isOpen ? 'rotate-45 translate-y-2' : ''
                 }`}></span>
-                <span className={`absolute top-3 left-0 w-7 h-0.5 bg-current transition-all duration-300 ${
+                <span className={`absolute top-3 left-0 w-7 h-[2px] bg-current transition-all duration-300 ${
                   isOpen ? 'opacity-0' : ''
                 }`}></span>
-                <span className={`absolute top-5 left-0 w-7 h-0.5 bg-current transition-all duration-300 ${
+                <span className={`absolute top-5 left-0 w-7 h-[2px] bg-current transition-all duration-300 ${
                   isOpen ? '-rotate-45 -translate-y-2' : ''
                 }`}></span>
               </div>
             </button>
 
             {/* Desktop Nav */}
-            <ul className="hidden lg:flex justify-between items-center gap-6 text-lg font-medium text-[#0F172A]">
-              <li className="hover:text-[#3B82F6] hover:cursor-pointer transition-all duration-300 transform hover:scale-105">
-                <a href="#home" className="relative group">
-                  HOME
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#3B82F6] transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
-              <li className="hover:text-[#3B82F6] hover:cursor-pointer transition-all duration-300 transform hover:scale-105">
-                <a href="#about" className="relative group">
-                  ABOUT
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#3B82F6] transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
-              <li className="hover:text-[#3B82F6] hover:cursor-pointer transition-all duration-300 transform hover:scale-105">
-                <a href="#experience" className="relative group">
-                  EXPERIENCE
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#3B82F6] transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
-              <li className="hover:text-[#3B82F6] hover:cursor-pointer transition-all duration-300 transform hover:scale-105">
-                <a href="#skills" className="relative group">
-                  SKILLS
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#3B82F6] transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
-              <li className="hover:text-[#3B82F6] hover:cursor-pointer transition-all duration-300 transform hover:scale-105">
-                <a href="#projects" className="relative group">
-                  PROJECTS
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#3B82F6] transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
-              <li className="hover:text-[#3B82F6] hover:cursor-pointer transition-all duration-300 transform hover:scale-105">
-                <a href="#contact" className="relative group">
-                  CONTACT
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#3B82F6] transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
+            <ul className="hidden lg:flex justify-between items-center gap-6 text-[15px] font-semibold text-[#F5F5F5]">
+              {navLinks.map((link) => (
+                <li key={link.name} className="relative group">
+                  <a href={link.href} className="hover:text-[#4DD0E1] transition-colors tracking-wider">
+                    {link.name}
+                  </a>
+                  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#00BCD4] transition-all duration-300 group-hover:w-full"></span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </div>
 
-      {/* Enhanced Overlay with animation */}
+      {/* Mobile Overlay */}
       <div
-        className={`fixed inset-0 bg-black/40 z-[199] lg:hidden transition-all duration-300 ${
+        className={`fixed inset-0 bg-[#0A1628]/80 backdrop-blur-md z-[199] lg:hidden transition-all duration-300 ${
           isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
         onClick={closeMenu}
       />
 
-      {/* Enhanced Sidebar with better animations */}
+      {/* Mobile Sidebar */}
       <aside
         id="mobile-sidebar"
-        className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-br from-white to-gray-50 shadow-2xl z-[200] transform transition-all duration-500 ease-out lg:hidden ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed top-0 right-0 h-full w-64 bg-[#1E3A5F] shadow-2xl z-[200] transform transition-transform duration-300 ease-out lg:hidden border-l border-[rgba(0,188,212,0.2)] ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        role="dialog"
-        aria-modal="true"
       >
-        {/* Sidebar Header */}
-        <div className="p-6 flex items-center justify-between border-b border-gray-200 bg-[#0F172A] text-white">
-          <span className="text-xl font-bold">Navigation</span>
+        <div className="p-6 flex items-center justify-between border-b border-[rgba(0,188,212,0.1)]">
+          <span className="text-xl font-bold text-white tracking-widest">MENU</span>
           <button
             type="button"
-            aria-label="Close menu"
             onClick={closeMenu}
-            className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/20 focus:outline-none transition-all duration-300 transform hover:scale-110"
+            className="p-2 text-[#F5F5F5] hover:text-[#4DD0E1] transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        {/* Navigation Links */}
         <nav className="p-6">
-          <ul className="flex flex-col gap-2">
-            <li className={`transform transition-all duration-300 ${
-              isOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
-            }`} style={{ transitionDelay: isOpen ? '100ms' : '0ms' }}>
-              <a 
-                href="#home" 
-                onClick={closeMenu} 
-                className="block px-4 py-3 text-lg font-medium text-[#0F172A] hover:text-[#3B82F6] hover:bg-gray-100 rounded-lg transition-all duration-300 transform hover:translate-x-2 hover:scale-105"
-              >
-                HOME
-              </a>
-            </li>
-            <li className={`transform transition-all duration-300 ${
-              isOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
-            }`} style={{ transitionDelay: isOpen ? '200ms' : '0ms' }}>
-              <a 
-                href="#about" 
-                onClick={closeMenu} 
-                className="block px-4 py-3 text-lg font-medium text-[#0F172A] hover:text-[#3B82F6] hover:bg-gray-100 rounded-lg transition-all duration-300 transform hover:translate-x-2 hover:scale-105"
-              >
-                ABOUT
-              </a>
-            </li>
-            <li className={`transform transition-all duration-300 ${
-              isOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
-            }`} style={{ transitionDelay: isOpen ? '300ms' : '0ms' }}>
-              <a 
-                href="#contact" 
-                onClick={closeMenu} 
-                className="block px-4 py-3 text-lg font-medium text-[#0F172A] hover:text-[#3B82F6] hover:bg-gray-100 rounded-lg transition-all duration-300 transform hover:translate-x-2 hover:scale-105"
-              >
-                📧 CONTACT
-              </a>
-            </li>
+          <ul className="flex flex-col gap-4">
+            {navLinks.map((link, index) => (
+              <li key={link.name} className={`transform transition-all duration-300 ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`} style={{ transitionDelay: `${index * 50}ms` }}>
+                <a 
+                  href={link.href} 
+                  onClick={closeMenu} 
+                  className="block text-lg font-medium text-[#F5F5F5] hover:text-[#4DD0E1] transition-colors"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
-
-        {/* Sidebar Footer */}
-        <div className={`absolute bottom-6 left-6 right-6 transform transition-all duration-300 ${
-          isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-        }`} style={{ transitionDelay: isOpen ? '400ms' : '0ms' }}>
-          <div className="text-center text-sm text-gray-500">
-            <p>© 2024 Vasanth Portfolio</p>
-          </div>
-        </div>
       </aside>
     </>
   );
