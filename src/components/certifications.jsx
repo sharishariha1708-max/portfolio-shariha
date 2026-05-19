@@ -4,20 +4,9 @@ export default function Certifications() {
   const [headerRef, isHeaderVisible] = useScrollAnimation(0.2);
   const [cardsRef, isCardsVisible] = useScrollAnimation(0.1);
 
-  const certifications = [
-    {
-      title: "SQL (Basic)",
-      issuer: "HackerRank",
-      year: "2023",
-      icon: "🏆",
-      description: "Validated proficiency in SQL queries, joins, filtering, and data retrieval.",
-      badge: "Verified"
-    }
-  ];
-
   return (
     <div id="certifications" className="py-24 px-4 bg-deep-teal-gradient relative overflow-hidden">
-      <div className="container">
+      <div className="container max-w-4xl mx-auto">
         <div 
           ref={headerRef}
           className={`fade-in-up text-center mb-16 ${isHeaderVisible ? 'visible' : ''}`}
@@ -30,35 +19,45 @@ export default function Certifications() {
 
         <div 
           ref={cardsRef}
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 ${isCardsVisible ? 'visible' : ''}`}
+          className={`flex justify-center mb-16 ${isCardsVisible ? 'visible' : ''}`}
         >
-          {certifications.map((cert, index) => (
-            <div 
-              key={index}
-              className={`glass-panel p-8 rounded-xl hover-lift scale-in stagger-${(index % 4) + 1} ${isCardsVisible ? 'visible' : ''} relative`}
-              style={{ transitionDelay: `${index * 0.1}s` }}
-            >
-              {cert.badge && (
-                <div className="absolute top-4 right-4 bg-[#00BCD4] text-white text-xs font-bold px-3 py-1 rounded-full shadow-[0_0_10px_rgba(0,188,212,0.4)] tracking-wide">
-                  {cert.badge}
-                </div>
-              )}
-              
-              <div className="flex flex-col gap-4">
-                <div className="text-4xl mb-2">
-                  {cert.icon}
+          <div 
+            className="w-full bg-[#0D1B2A] border border-[#1E3A5F] rounded-[14px] p-6 hover:shadow-[0_0_20px_rgba(0,188,212,0.3)] hover:border-[#00BCD4] hover:-translate-y-1 transition-all duration-300 ease-in-out relative"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-lg bg-[rgba(0,188,212,0.15)] text-[#00BCD4] flex items-center justify-center text-xl">
+                  🏆
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-[#FFFFFF] mb-2">{cert.title}</h2>
-                  <p className="text-[#80DEEA] font-medium text-lg">{cert.issuer}</p>
-                  <p className="text-[#9E9E9E] text-sm mt-1 mb-4">{cert.year}</p>
-                  <p className="text-[#F5F5F5] leading-relaxed">
-                    {cert.description}
-                  </p>
+                  <h2 className="text-[18px] font-bold text-[#FFFFFF]">SQL (Basic)</h2>
+                  <p className="text-[13px] text-[#00BCD4]">HackerRank</p>
                 </div>
               </div>
+              <div className="bg-[rgba(0,188,212,0.15)] border border-[#00BCD4] text-[#00BCD4] text-[11px] rounded-full px-[10px] py-[3px]">
+                ✔ Verified
+              </div>
             </div>
-          ))}
+
+
+            {/* Description */}
+            <div className="mb-6 mt-4">
+              <p className="text-[13px] text-[#90A4AE]">
+                Validated proficiency in SQL queries, joins, filtering, and data retrieval.
+              </p>
+            </div>
+
+            {/* Button */}
+            <a 
+              href="https://www.hackerrank.com/certificates/iframe/e33eda54cc03"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-transparent border border-[#00BCD4] text-[#00BCD4] px-5 py-2 rounded-lg text-[13px] hover:bg-[#00BCD4] hover:text-[#FFFFFF] hover:shadow-[0_0_12px_rgba(0,188,212,0.4)] transition-all duration-200 ease-in-out"
+            >
+              🔗 View Full Certificate
+            </a>
+          </div>
         </div>
 
         <div className="text-center fade-in-up visible">
