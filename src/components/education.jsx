@@ -6,23 +6,23 @@ export default function Education() {
 
   const educationList = [
     {
-      degree: "Bachelor of Engineering — Computer Science & Engineering",
-      institution: "Nehru Institute of Engineering and Technology",
-      score: "7.6 CGPA",
-      year: "2019 – 2023",
+      degree: "Bachelor of Business Administration (Aviation & Ground Handling)",
+      institution: "Bishop Heber College",
+      score: null,
+      year: "2021 – 2024",
       icon: "🎓"
     },
     {
       level: "Higher Secondary (HSC)",
-      institution: "SDA Matric Hr. Sec. School",
-      score: "66%",
-      year: "2018 – 2019"
+      institution: "Syed Ammal Matric Hr Sec School",
+      score: null,
+      year: "2020 – 2021"
     },
     {
       level: "Secondary (SSLC)",
-      institution: "SDA Matric Hr. Sec. School",
-      score: "92%",
-      year: "2016 – 2017"
+      institution: "A.V.M.S Matric Hr Sec School",
+      score: null,
+      year: "2017 – 2018"
     }
   ];
 
@@ -62,9 +62,11 @@ export default function Education() {
                     {edu.institution}
                   </p>
                   <div className="flex gap-4 mt-2">
-                    <span className="bg-gray-100 px-3 py-1 rounded-md text-sm font-semibold text-[#424242]">
-                      Score: {edu.score}
-                    </span>
+                    {edu.score && (
+                      <span className="bg-gray-100 px-3 py-1 rounded-md text-sm font-semibold text-[#424242]">
+                        Score: {edu.score}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

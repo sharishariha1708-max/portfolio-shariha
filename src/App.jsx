@@ -6,7 +6,6 @@ import Skills from './components/skills'
 import Projects from './components/projects'
 import Experience from './components/experience'
 import Footer from './components/footer'
-import Certifications from './components/certifications'
 import Education from './components/education'
 import { useState, useEffect } from 'react'
 
@@ -31,7 +30,7 @@ export default function App() {
               <div className="absolute inset-0 rounded-full border-[3px] border-[#1E3A5F] shadow-[0_0_15px_rgba(0,188,212,0.2)]"></div>
               <div className="absolute inset-0 rounded-full border-[3px] border-transparent border-t-[#4DD0E1] border-r-[#00BCD4] animate-spin"></div>
               <div className="absolute inset-3 bg-[#1E3A5F] rounded-full flex items-center justify-center shadow-[0_0_10px_rgba(0,188,212,0.2)]">
-                <span className="text-2xl font-bold text-[#FFFFFF] tracking-wider">VB</span>
+                <span className="text-2xl font-bold text-[#FFFFFF] tracking-wider">SS</span>
               </div>
             </div>
           </div>
@@ -51,12 +50,12 @@ export default function App() {
     <div className="page-load bg-dots-pattern">
       <Navbar></Navbar>
 
-      <Header resumeLink='/Vasanth - Resume.pdf'></Header>
+      <Header></Header>
       <About></About>
       <Experience></Experience>
       <Projects></Projects>
       <Skills></Skills>
-      <Certifications></Certifications>
+
       <Education></Education>
       
       <Footer></Footer>
