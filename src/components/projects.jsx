@@ -6,31 +6,32 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Cloud-Based Log Monitoring System using AWS and Python",
-      status: "🚧 Developing",
-      tags: ["AWS IAM", "AWS EC2", "AWS S3", "AWS VPC", "CloudWatch", "Python", "Boto3", "Linux", "Cron"],
-      description: "Build a cloud-based log monitoring and automation system to collect, analyze, and manage server logs using AWS services and Python scripting.",
+      title: "Batch ETL Pipeline using Sqoop, Hive & Apache Spark",
+      status: "🚧 In Development",
+      tags: ["MySQL", "Sqoop", "HDFS", "Hive", "Apache Spark", "PySpark", "Spark SQL", "Cron"],
+      description: "End-to-end batch ETL pipeline that incrementally ingests data from MySQL into HDFS via Sqoop, processes it with PySpark and Spark SQL, and stores results in Hive for analytical querying — simulating real-world batch data processing systems.",
       features: [
-        "Deployed Linux-based EC2 instances within a secure AWS environment with VPC networking",
-        "Configured IAM roles and policies to enable secure access between AWS services",
-        "Developed Python automation scripts using Boto3 to continuously read log files, detect warning/error patterns, and upload logs to S3",
-        "Automated periodic log monitoring tasks using Cron scheduling with planned CloudWatch integration for alerts"
+        "Incremental data ingestion from MySQL → HDFS using Sqoop",
+        "Hive external tables for managing and querying raw data",
+        "PySpark transformations: filtering, aggregation, business logic",
+        "Automated pipeline execution via Cron scheduling"
       ],
-      githubLink: "https://github.com/sharishariha1708-max",
+      githubLink: "https://github.com/VasanthBalasubramaniyan/",
       demoLink: null
     },
     {
-      title: "Automated AWS Resource Provisioning System",
-      status: "✅ Completed",
-      tags: ["AWS EC2", "AWS IAM", "AWS S3", "AWS VPC", "Python", "Boto3", "Linux", "Cloud Automation"],
-      description: "Build an infrastructure automation system to automatically create and manage AWS resources using Python and AWS SDK.",
+      title: "Personal Portfolio Website",
+      status: "✅ Live",
+      tags: ["HTML", "CSS", "Tailwind CSS", "JavaScript", "React.js"],
+      description: "A clean, modern, responsive portfolio website built with React.js and Tailwind CSS to showcase data engineering projects, technical skills, and professional experience — with reusable components and optimized performance.",
       features: [
-        "Developed Python scripts using Boto3 to automate provisioning of EC2 instances, S3 buckets, IAM users, and security groups",
-        "Implemented reusable automation modules to reduce manual cloud configuration tasks and improve deployment efficiency",
-        "Added logging and validation mechanisms to track infrastructure creation and ensure secure access management"
+        "Fully responsive design across all device sizes",
+        "Reusable React components for scalability",
+        "Dynamic project sections with smooth navigation",
+        "Performance-optimized static deployment"
       ],
-      githubLink: "https://github.com/sharishariha1708-max",
-      demoLink: null
+      githubLink: "https://github.com/VasanthBalasubramaniyan/portfolio-new",
+      demoLink: "https://vasanth-portfolio-xtjc.onrender.com/"
     }
   ];
 

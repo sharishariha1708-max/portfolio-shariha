@@ -5,34 +5,34 @@ export default function About() {
 
   const highlights = [
     {
-      title: "AWS Cloud Infrastructure",
+      title: "ETL Pipeline Development",
+      desc: "Batch processing with Sqoop, Hive & Apache Spark",
+      icon: "⚡"
+    },
+    {
+      title: "Python & SQL",
+      desc: "Data transformation, cleaning, and modeling",
+      icon: "🐍"
+    },
+    {
+      title: "AWS Cloud",
       desc: "EC2, S3, IAM, VPC — deployed & managed environments",
       icon: "☁️"
     },
     {
-      title: "Python & SQL",
-      desc: "Data processing, automation scripting, database management",
-      icon: "🐍"
-    },
-    {
-      title: "Cloud Automation",
-      desc: "Boto3, Shell Scripting, Cron Scheduling for automated resource provisioning",
-      icon: "⚙️"
-    },
-    {
-      title: "Security & IAM",
-      desc: "Secure access control, IAM roles, least-privilege policies",
-      icon: "🔐"
-    },
-    {
-      title: "Log Monitoring",
-      desc: "Centralized logging, CloudWatch integration, S3 backup",
+      title: "Big Data Stack",
+      desc: "Hadoop, HDFS, PySpark, Spark SQL",
       icon: "📊"
     },
     {
-      title: "Linux Environments",
-      desc: "Server management, basic networking, bash scripting",
-      icon: "🐧"
+      title: "Database Management",
+      desc: "MySQL, data warehousing, data modeling",
+      icon: "🗄️"
+    },
+    {
+      title: "Tools & Workflow",
+      desc: "Git, Jira, TablePlus, Cron Scheduling",
+      icon: "🔧"
     }
   ];
 
@@ -52,10 +52,10 @@ export default function About() {
           {/* Left Column: Summary */}
           <div className="md:w-1/2 flex flex-col justify-center">
             <p className="text-lg leading-relaxed mb-6 text-[#212121]">
-              I'm Shariha Sri S, an AWS Cloud Engineer with hands-on experience in Python, SQL, and AWS. I'm skilled in cloud infrastructure setup, resource management, and developing automation scripts to improve deployment efficiency.
+              I'm Vasanth B, a Data Engineer with hands-on experience in SQL, Python, and AWS, currently building batch ETL pipelines using Sqoop, Hive, and Apache Spark. I'm skilled in data processing, transformation, and working with structured datasets at scale.
             </p>
             <p className="text-lg leading-relaxed mb-8 text-[#212121]">
-              Currently, I'm gaining practical exposure through an AWS Cloud Internship at Scope Tech Software Solutions, focusing on secure, scalable, and cost-efficient cloud solutions. I'm passionate about building reliable cloud environments and preparing for Cloud Engineering roles.
+              Currently deepening my expertise through an AWS Cloud Internship at Scope Tech Software Solutions, where I work with EC2, S3, IAM, and VPC. I'm passionate about building scalable data pipelines and solving real-world data challenges.
             </p>
             
             <div className="inline-flex items-center gap-3 bg-[#E0F7FA] text-[#00838F] px-6 py-3 rounded-full shadow-sm border-l-4 border-l-[#00BCD4] self-start">

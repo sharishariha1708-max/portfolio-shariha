@@ -16,6 +16,18 @@ export default function Experience() {
         "Designed and configured VPC architecture including subnets and networking components for isolated environments",
         "Deployed and tested cloud resources, reducing manual configuration effort by ~25%"
       ]
+    },
+    {
+      title: "Customer Support Executive",
+      company: "Troika Research Technologies",
+      location: "Coimbatore, Tamil Nadu, India",
+      duration: "Jan 2024 – Sept 2025",
+      bullets: [
+        "Handled high-volume outbound calls, effectively communicating with clients and resolving queries",
+        "Maintained consistent call quality and professionalism across all customer interactions",
+        "Developed strong communication, active listening, and problem-solving skills in a fast-paced environment",
+        "Collaborated with team members to meet daily outbound call targets and performance goals"
+      ]
     }
   ];
 
