@@ -57,7 +57,7 @@ export default function Header() {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-10">
             <a 
               href="#projects" 
-              className="btn-primary px-8 py-3.5 rounded text-xs font-bold tracking-[0.15em] font-mono-code transition-all duration-300 flex items-center justify-center gap-2 group"
+              className="btn-primary px-8 py-3.5 rounded text-xs font-bold tracking-[0.15em] font-mono-code transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
             >
               VIEW PROJECTS
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 transform group-hover:translate-y-1 transition-transform">
@@ -65,8 +65,18 @@ export default function Header() {
               </svg>
             </a>
             <a 
+              href="/resume/Shariha Resume.pdf" 
+              download="Shariha_Resume.pdf"
+              className="btn-outline border border-[#00c8ff]/60 hover:border-[#00c8ff] text-[#00c8ff] hover:bg-[#00c8ff]/10 px-8 py-3.5 rounded text-xs font-bold tracking-[0.15em] font-mono-code transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer animate-pulse-subtle"
+            >
+              DOWNLOAD RESUME
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+            </a>
+            <a 
               href="#contact" 
-              className="btn-outline px-8 py-3.5 rounded text-xs font-bold tracking-[0.15em] font-mono-code transition-all duration-300 flex items-center justify-center gap-2"
+              className="btn-outline px-8 py-3.5 rounded text-xs font-bold tracking-[0.15em] font-mono-code transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >
               CONTACT ME
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">

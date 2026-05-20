@@ -77,12 +77,24 @@ export default function Navbar() {
               </ul>
               
               {/* Sleek CTA on Navbar */}
-              <a 
-                href="#contact" 
-                className="hidden xl:inline-block border border-[rgba(0,200,255,0.4)] hover:border-[#00c8ff] text-[#00c8ff] hover:bg-[#00c8ff]/10 px-4 py-1.5 rounded text-xs font-bold tracking-[0.15em] font-mono-code transition-all duration-300"
-              >
-                CONNECT
-              </a>
+              <div className="flex items-center gap-4">
+                <a 
+                  href="/resume/Shariha Resume.pdf" 
+                  download="Shariha_Resume.pdf"
+                  className="border border-[#00c8ff]/50 hover:border-[#00c8ff] text-[#00c8ff] hover:bg-[#00c8ff]/10 px-4 py-1.5 rounded text-xs font-bold tracking-[0.15em] font-mono-code transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-3.5 h-3.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                  RESUME
+                </a>
+                <a 
+                  href="#contact" 
+                  className="hidden xl:inline-block border border-[rgba(255,255,255,0.2)] hover:border-white text-white hover:bg-white/10 px-4 py-1.5 rounded text-xs font-bold tracking-[0.15em] font-mono-code transition-all duration-300"
+                >
+                  CONNECT
+                </a>
+              </div>
             </nav>
           </div>
         </div>
@@ -133,8 +145,19 @@ export default function Navbar() {
           </ul>
         </nav>
         
-        <div className="p-8 border-t border-[rgba(0,200,255,0.1)] text-center">
-          <p className="text-xs text-[#546e7a] font-mono-code mb-4">Shariha Sri S · 2026</p>
+        <div className="p-8 border-t border-[rgba(0,200,255,0.1)] text-center flex flex-col gap-3">
+          <p className="text-xs text-[#546e7a] font-mono-code mb-1">Shariha Sri S · 2026</p>
+          <a 
+            href="/resume/Shariha Resume.pdf" 
+            download="Shariha_Resume.pdf"
+            onClick={closeMenu}
+            className="block border border-[#00c8ff] text-[#00c8ff] hover:bg-[#00c8ff]/10 text-center py-2.5 rounded text-xs font-bold font-mono-code tracking-[0.15em] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+            DOWNLOAD RESUME
+          </a>
           <a 
             href="#contact" 
             onClick={closeMenu}
